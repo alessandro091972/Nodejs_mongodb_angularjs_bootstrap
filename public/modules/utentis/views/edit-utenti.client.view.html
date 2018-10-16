@@ -1,0 +1,43 @@
+<section data-ng-controller="UtentisController" data-ng-init="findOne()">
+    <div class="page-header">
+        <h1>Edit Utenti</h1>
+    </div>
+    <div class="col-md-12">
+        <form class="form-horizontal" data-ng-submit="update()" novalidate>
+            <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="firstName">Name</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="utenti.firstName" id="firstName" class="form-control" placeholder="FirstName" required>
+                    </div>
+                    
+                    <label class="control-label" for="lastName">LastName</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="utenti.lastName" id="lastName" class="form-control" placeholder="LastName" required>
+                    </div>
+                    
+                    <label class="control-label" for="username">Username</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="utenti.username" id="username" class="form-control" placeholder="Username" required>
+                    </div>
+                    
+                    <label class="control-label" for="password">Password</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="utenti.password" id="password" class="form-control" placeholder="Password" required>
+                    </div>
+                    
+                    <label class="control-label" for="email">Email</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="utenti.email" id="email" class="form-control" placeholder="Email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Update" class="btn btn-default">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>

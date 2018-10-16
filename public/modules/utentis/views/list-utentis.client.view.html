@@ -1,0 +1,63 @@
+
+
+<section data-ng-controller="UtentisController" data-ng-init="find()">
+   <div class="page-header">
+      <h1>Utenti</h1>
+   </div>
+  
+  
+
+   <div class="container">
+      
+      <div class="table-responsive">         
+           <table class="table">
+            <thead>
+               <tr>
+                
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Username</th>
+                  <th>Password</th>
+                  <th>Email</th>
+               </tr>
+                
+               
+            </thead>
+            <tbody>
+              <tr ng-repeat="utenti in utentis">
+            <td>
+               <a style="display: block;" ng-href="#!/utentis/{{utenti._id}}">
+               {{utenti.firstName}}
+               </a>
+            </td>
+            <td>
+               <a style="display: block;" ng-href="#!/utentis/{{utenti._id}}">
+               {{utenti.lastName}}
+               </a>
+            </td>
+            <td>
+               <a style="display: block;" ng-href="#!/utentis/{{utenti._id}}">
+               {{utenti.username}}
+               </a>
+            </td>
+            <td>
+               <a style="display: block;" ng-href="#!/utentis/{{utenti._id}}">
+               {{utenti.password}}
+               </a>
+            </td>
+            <td>
+               <a style="display: block;" ng-href="#!/utentis/{{utenti._id}}">
+               {{utenti.email}}
+               </a>
+            </td>
+         </tr>
+               
+            </tbody>
+         </table>
+      </div>
+     
+   </div>
+   <div class="alert alert-warning text-center" data-ng-hide="!utentis.$resolved || utentis.length">
+      No Utentis yet, why don't you <a href="/#!/utentis/create">create one</a>?
+   </div>
+</section>
